@@ -1,5 +1,3 @@
-from PIL.ImageChops import difference
-
 file = open("input.prod", "r")
 input = file.readlines()
 file.close()
