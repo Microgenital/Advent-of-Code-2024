@@ -14,7 +14,7 @@ def get_file():
         datas += i
     return datas
 
-def extract_and_multiply(input_string):
+def find_and_multiply(input_string):
     # Regular expression to find valid mul(X,Y) instructions
     pattern = r'mul\(\d{1,3},\d{1,3}\)'
     matches = re.findall(pattern, input_string)
@@ -28,5 +28,28 @@ def extract_and_multiply(input_string):
 
     return total_sum
 
+def find_and_multiply_on_off(input_string):
+    # Regular expression to find valid mul(X,Y) instructions
+    pattern = r'mul\(\d{1,3},\d{1,3}\)|do\(\)|don\'t\(\)'
+    matches = re.findall(pattern, input_string)
+
+    total_sum = 0
+    mul_enabled = True  # Initially, mul instructions are enabled
+
+    for match in matches:
+        if match == 'do()':
+            mul_enabled = True
+        elif match == "don't()":
+            mul_enabled = False
+        elif mul_enabled and match.startswith('mul'):
+            # Extract the numbers from the match
+            numbers = re.findall(r'\d+', match)
+            x, y = int(numbers[0]), int(numbers[1])
+            # Perform the multiplication and add to the total sum
+            total_sum += x * y
+
+    return total_sum
+
 if __name__ == "__main__":
-    print(extract_and_multiply(get_file()))
+    print(find_and_multiply(get_file()))
+    print(find_and_multiply_on_off(get_file()))
