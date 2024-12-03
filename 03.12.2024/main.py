@@ -28,5 +28,5 @@ def extract_and_multiply(input_string):
 
     return total_sum
 
-result = extract_and_multiply(get_file())
-print(result)
+if __name__ == "__main__":
+    print(extract_and_multiply(get_file()))
