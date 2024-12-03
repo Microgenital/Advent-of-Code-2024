@@ -1,8 +1,11 @@
 # Advent of Code 2024 Solution
 
-I'm trying to solve the Advent of Code 2024 problems with Python. Since I'm not a professional programmer, please forgive my bad code. This is a learning experience for me—programming is just a hobby that I pursue, sometimes more actively, sometimes less. I enjoy exploring and learning as I go.
+I'm trying to solve the Advent of Code 2024 problems with Python. Since I'm not a professional programmer, please
+forgive my bad code. This is a learning experience for me—programming is just a hobby that I pursue, sometimes more
+actively, sometimes less. I enjoy exploring and learning as I go.
 
 # Solved
+
 Day 01: ⭐ ⭐\
 Day 02: ⭐ ⭐\
 Day 03: ⭐ ⭐\

@@ -1,5 +1,6 @@
 import re
 
+
 def get_file():
     file = open("input.prod", "r")
     data = file.readlines()
@@ -8,11 +9,12 @@ def get_file():
     # Clean the data
     input = []
     for i in data:
-        input.append(i[:-1]) # removes the "\n" at the end of each line
+        input.append(i[:-1])  # removes the "\n" at the end of each line
     datas = ""
     for i in input:
         datas += i
     return datas
+
 
 def find_and_multiply(input_string):
     # Regular expression to find valid mul(X,Y) instructions
@@ -27,6 +29,7 @@ def find_and_multiply(input_string):
         total_sum += x * y
 
     return total_sum
+
 
 def find_and_multiply_on_off(input_string):
     # Regular expression to find valid mul(X,Y) instructions
@@ -49,6 +52,7 @@ def find_and_multiply_on_off(input_string):
             total_sum += x * y
 
     return total_sum
+
 
 if __name__ == "__main__":
     print(find_and_multiply(get_file()))
