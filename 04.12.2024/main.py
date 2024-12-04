@@ -1,3 +1,6 @@
+import re
+
+
 def get_file():
     file = open("input.test", "r")
     data = file.readlines()
@@ -9,4 +12,15 @@ def get_file():
 
     return input
 
-print(get_file())
+
+def find_xmas(input):
+    pattern = r'XMAS|SAMX'
+    matches = 0
+    for i in input:
+        if re.search(pattern, i):
+            matches += 1
+    return matches
+
+
+if __name__ == "__main__":
+    print(find_xmas(get_file()))
