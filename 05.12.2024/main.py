@@ -40,15 +40,12 @@ def main():
     rules, update_list = format_list(input_data)
 
     total_middle_sum = 0
-    for i in range(1, len(update_list)):
+    for i in range(0, len(update_list)):
         # print(update_list[i])
         if is_update_valid(update_list[i], rules):
             middle_number = int(get_middle_number(update_list[i]))
             total_middle_sum += middle_number
     print(total_middle_sum)
-
-
-# FIXME: i dont know whats wrong, need to look at it tomorrow, should be getting 143, but gets 16
 
 
 if __name__ == "__main__":
