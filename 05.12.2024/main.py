@@ -31,8 +31,7 @@ def is_update_valid(update_list, rules):
 
 
 def get_middle_number(input_list):
-    input_list = input_list[0].split(",")
-    print(input_list[len(input_list) // 2])
+    input_list = input_list.split(",")
     return input_list[len(input_list) // 2]
 
 
