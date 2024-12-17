@@ -1,5 +1,5 @@
 def get_file():
-    file = open("input.test", "r")
+    file = open("input.prod", "r")
     data = file.readlines()
     file.close()
 
